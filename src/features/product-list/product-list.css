@@ -1,0 +1,60 @@
+.product-list {
+    padding: 2em 0;
+  }
+  .product-list .product-items {
+    background-color: #fff;
+    padding: 1.5em 2em 2em;
+    color: #555;
+    min-width: 35%;
+    max-width: 35%;
+    margin: 1%;
+    border-radius: 0.5em;
+    transform: scale(0.98);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+  .product-list .product-items:hover {
+    box-shadow: 0 0.3em 2em rgba(0, 0, 0, 0.15);
+    transform: scale(1);
+  }
+  .product-list .product-items h2 {
+    font-weight: normal;
+  }
+  .product-list .product-items h2 span {
+    font-size: 0.6em;
+    text-transform: capitalize;
+    color: #a0a0a0;
+  }
+  .product-list .product-items h2 span::before {
+    content: " / ";
+  }
+  .product-list .product-items .image-desc {
+    padding: 2em 0;
+  }
+  .product-list .product-items .image-desc img {
+    width: 10em;
+  }
+  .product-list .product-items .image-desc p {
+    line-height: 1.5em;
+  }
+  .product-list .product-items .price {
+    position: absolute;
+    top: 1.5em;
+    right: 2em;
+    color: #ac425e;
+    font-weight: 700;
+    font-size: 1.15em;
+  }
+  .product-list .product-items .price::before {
+    content: "Rs.";
+  }
+  .product-list .product-items .actions button {
+    padding: 1em;
+    cursor: pointer;
+  }
+  .product-list .product-items .actions button:hover {
+    background-color: #00896f;
+    color: #fff;
+  }
+  

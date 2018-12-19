@@ -1,0 +1,42 @@
+.cart-detail {
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.05);
+    min-width: 30%;
+  }
+  .cart-detail h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .cart-detail .total {
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  .cart-detail .total .title {
+    color: #777;
+  }
+  .cart-detail .total .value {
+    padding-top: 0.5em;
+    font-weight: bold;
+  }
+  .cart-detail .summary-list {
+    padding-top: 1em;
+  }
+  .cart-detail .summary-list .summary {
+    padding: 0.5em 0;
+    position: relative;
+  }
+  .cart-detail .summary-list .summary.head .item {
+    color: #a0a0a0;
+  }
+  .cart-detail .summary-list .summary .remove {
+    position: absolute;
+    top: 0.5em;
+    right: 0;
+    font-size: 0.9em;
+    color: red;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  

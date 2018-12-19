@@ -1,0 +1,8 @@
+.main-container h1 {
+    padding: 1em 1em 0.5em;
+    border-bottom: 4px solid #000;
+  }
+  .main-container .product-list-container {
+    padding: 2em;
+  }
+  
