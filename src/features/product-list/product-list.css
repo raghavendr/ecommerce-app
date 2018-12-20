@@ -58,6 +58,7 @@
   .product-list .product-items .actions button {
     padding: 1em;
     cursor: pointer;
+    background-color: #ddd;
   }
   .product-list .product-items .actions button:hover {
     background-color: #00896f;
