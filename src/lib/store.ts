@@ -1,6 +1,18 @@
-import {observable, action} from 'mobx';
+import {observable, action, autorun, toJS} from 'mobx';
 
-export let cart: Iproduct[] = observable([] as Iproduct[]);
+let existingData;
+const sessionItem = localStorage.getItem('cart');
+
+if(sessionItem){
+    existingData = JSON.parse(sessionItem) || [];
+}
+
+export let cart: Iproduct[] = observable(existingData as Iproduct[]);
+
+autorun(()=> 
+    localStorage.setItem('cart', JSON.stringify(toJS(cart)))
+)
+
 
 export function isItemInCart(id: number):boolean {
     return cart.some(item => item.id === id);
