@@ -1,10 +1,11 @@
 import {observable, action, autorun, toJS} from 'mobx';
+import { getDataFromId } from './js.helper';
 
-let existingData;
+let existingData: Iproduct[] = [];
 const sessionItem = localStorage.getItem('cart');
 
 if(sessionItem){
-    existingData = JSON.parse(sessionItem) || [];
+    existingData = JSON.parse(sessionItem);
 }
 
 export let cart: Iproduct[] = observable(existingData as Iproduct[]);
@@ -34,7 +35,11 @@ export function getItemTotalPrice(id: number) {
 
 export const removeItem = action((id: number) => {
     cart.splice(cart.findIndex(v=> v.id === id), 1);
-})
+});
+
+export const addItem = action((id: number) => {
+    cart.push(getDataFromId(id));
+});
 
 export function getItemFromCart(id: number){
     return cart.filter((item:any) => item.id === id)[0];

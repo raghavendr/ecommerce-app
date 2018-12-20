@@ -3,7 +3,7 @@ import { getDataFromId } from '../../lib/js.helper';
 import './product-list.css';
 import { observer } from 'mobx-react';
 import { action } from 'mobx';
-import { cart, isItemInCart, removeItem, getItemFromCart, getQuantity } from 'src/lib/store';
+import { cart, isItemInCart, removeItem, getItemFromCart, getQuantity, addItem } from 'src/lib/store';
 
 @observer
 export class ProductList extends React.Component<{id: number}, {}> {
@@ -17,7 +17,7 @@ export class ProductList extends React.Component<{id: number}, {}> {
                 }
             });
         }else{         
-            cart.push(getDataFromId(this.props.id));
+            addItem(this.props.id);
         }
     }
 
