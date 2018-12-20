@@ -30,13 +30,32 @@
   .cart-detail .summary-list .summary.head .item {
     color: #a0a0a0;
   }
+  .cart-detail .summary-list .summary.body .name {
+    color: #008CCA;
+  }
+  .cart-detail .summary-list .summary.body .qty, .cart-detail .summary-list .summary.body .price  {
+    font-weight: 600;
+  }
+  
   .cart-detail .summary-list .summary .remove {
     position: absolute;
-    top: 0.5em;
+    top: .5em;
     right: 0;
     font-size: 0.9em;
-    color: red;
-    font-weight: 600;
+    background-color: #CD3F2C;
+    color: #fff;
+    padding: .25em .5em;
     cursor: pointer;
+  }
+
+  .cart-detail .summary-list .cart-empty {
+    text-align: center;
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid #ddd;
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: #FEFEDF;
+    color: #296073;
   }
   

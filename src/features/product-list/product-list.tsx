@@ -35,7 +35,6 @@ export class ProductList extends React.Component<{id: number}, {}> {
     @action
     public increaseQty = (id: number) => {
         const item = getItemFromCart(id);
-        console.log('increasing',item);
         item.qty++;
     }
     
@@ -46,14 +45,14 @@ export class ProductList extends React.Component<{id: number}, {}> {
         return(
             <div className="item product-items">
                 <p className="item price">{item.price}</p>
-                <h2 className="item">{item.product_name} <span>{item.brand_name}</span></h2>
+                <h2 className="item">{item.product_name} <span className="item shrink">{item.brand_name}</span></h2>
                 <div className="item flex center image-desc">
                     <img className="item" src={item.image} />
                     <p className="item">{item.detail}</p>
                 </div>
                 <div className="item flex center actions">
                 {isItemInCart(item.id)? 
-                    <div className="item flex center">
+                    <div className="item shrink flex center cartCount">
                         <button className="item shrink" onClick={this.reduceQty.bind(this, item.id)}>-</button>
                         <div className="item">{getQuantity(item.id)} in cart</div>
                         <button className="item shrink" onClick={this.increaseQty.bind(this, item.id)}>+</button>

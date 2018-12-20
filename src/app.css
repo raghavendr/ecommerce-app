@@ -1,8 +1,31 @@
 .main-container h1 {
-    padding: 1em 1em 0.5em;
-    border-bottom: 4px solid #000;
-  }
-  .main-container .product-list-container {
-    padding: 2em;
-  }
+  padding: 1em 1em 0.5em;
+  border-bottom: 4px solid #000;
+}
   
+  
+@media screen and (max-width: 991px){
+  .main-container .product-list-container,
+  .main-container .product-list-container>div
+  {
+    display: block;
+  }
+
+  .main-container .product-list-container{padding: 0 1em;}
+
+  .main-container .product-list-container .product-items {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 1% 0;
+  }
+  .main-container .product-list-container .product-items h2>span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1439px){
+  .main-container .product-list-container .product-items {
+    max-width: 70%;
+    min-width: 70%;
+  }
+}

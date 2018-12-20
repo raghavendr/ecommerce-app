@@ -12,10 +12,13 @@ export function getTotalItems():number {
 }
 
 export function getTotalPrice():number {
-   const totalPrice  = cart.reduce((a,b) => a+b.price, 0);
-
-   return totalPrice;
+   return cart.reduce((a,b) => a+b.price*b.qty, 0);
 }
+
+export function getItemTotalPrice(id: number) {
+    const singleItem = cart.filter(item=> item.id === id)[0];
+    return singleItem.price*singleItem.qty; 
+ }
 
 export const removeItem = action((id: number) => {
     cart.splice(cart.findIndex(v=> v.id === id), 1);

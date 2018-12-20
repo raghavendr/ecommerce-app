@@ -49,6 +49,12 @@
   .product-list .product-items .price::before {
     content: "Rs.";
   }
+  .product-list .product-items .actions .cartCount>.item:nth-child(2) {
+    padding: 0 .5em;
+    font-size: 1.1.em;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
   .product-list .product-items .actions button {
     padding: 1em;
     cursor: pointer;

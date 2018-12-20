@@ -8,10 +8,9 @@ class App extends React.Component {
         return (
             <div className="item main-container">
                 <div className="item flex center">
-                    <h1 className="item">ReactJS Application</h1>
-                    
+                    <h1 className="item">ReactJS Application</h1>                    
                 </div>
-                <div className="item flex equal">
+                <div className="item flex equal product-list-container">
                     <ProductRoot/>
                     <CartDetail/>
                 </div>
